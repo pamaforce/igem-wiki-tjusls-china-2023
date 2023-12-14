@@ -1,0 +1,27 @@
+image: "node:lts-alpine"
+
+stages:
+  - deploy
+
+# These folders are cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    # Default cache directory from https://classic.yarnpkg.com/en/docs/install-ci/#gitlab.
+    - node_modules/
+
+pages:
+  stage: deploy
+  script:
+    - yarn install
+    - yarn build
+    - rm -rf public
+    - mv dist public
+    - mv _redirects public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+

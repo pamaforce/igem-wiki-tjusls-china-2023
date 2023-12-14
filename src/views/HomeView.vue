@@ -184,7 +184,7 @@
           @click="navigateToPage(item.path)"
         >
           <img :src="item.url" />
-          <p>{{ item.text }}</p>
+          <p style="color: black">{{ item.text }}</p>
         </div>
       </div>
     </div>
@@ -214,32 +214,32 @@ const six_image = [
   {
     url: "https://static.igem.wiki/teams/4627/wiki/home-1.jpg",
     path: "/design",
-    text: "design",
+    text: "Design",
   },
   {
     url: "https://static.igem.wiki/teams/4627/wiki/home-2.jpg",
     path: "/description",
-    text: "project",
+    text: "Project",
   },
   {
     url: "https://static.igem.wiki/teams/4627/wiki/home-3.jpg",
     path: "/model",
-    text: "model",
+    text: "Model",
   },
   {
     url: "https://static.igem.wiki/teams/4627/wiki/home-4.jpg",
     path: "/parts",
-    text: "part",
+    text: "Part",
   },
   {
     url: "https://static.igem.wiki/teams/4627/wiki/home-5.jpg",
     path: "/gold",
-    text: "judge",
+    text: "Judge",
   },
   {
     url: "https://static.igem.wiki/teams/4627/wiki/home-6.jpg",
     path: "/human-overview",
-    text: "hp",
+    text: "Hp",
   },
 ];
 const option = {
